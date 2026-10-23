@@ -404,7 +404,7 @@ def generate_mock_evaluation(identifier, exam_question="", rubric_criteria=""):
         }
 
     # Case 2: Physics - Ali Raza (5.5 / 10 Flawed Calculation & Missing Units)
-    elif any(k in ident for k in ["ali", "physics_sample_flawed", "flawed arithmetic", "flawed"]):
+    elif any(k in ident for k in ["ali raza", "physics_sample_flawed", "physics flawed"]):
         return {
             "transcribed_handwriting": (
                 "Student: Ali Raza | Roll: 2026-PHY-088 | Sub: Physics\n"

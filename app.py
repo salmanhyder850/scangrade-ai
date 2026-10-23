@@ -62,8 +62,11 @@ st.markdown("""
 
 # ----------------- API & CONFIGURATION -----------------
 API_KEY = os.getenv("GEMINI_API_KEY", "")
-if not API_KEY and "GEMINI_API_KEY" in st.secrets:
-    API_KEY = st.secrets["GEMINI_API_KEY"]
+try:
+    if not API_KEY and hasattr(st, "secrets") and "GEMINI_API_KEY" in st.secrets:
+        API_KEY = st.secrets["GEMINI_API_KEY"]
+except Exception:
+    pass
 
 # ----------------- PRESET EXAM SAMPLES -----------------
 PRESETS = {

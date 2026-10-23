@@ -807,36 +807,4 @@ if "eval_results" in st.session_state:
         else:
             st.success("🎉 No significant knowledge gaps detected! Candidate has mastered the topic.")
 
-    # Export & Download Section
-    st.markdown("---")
-    st.subheader("📥 Export Examination Records")
-    export_col1, export_col2 = st.columns([1, 1])
 
-    with export_col1:
-        # CSV Export
-        summary_df = pd.DataFrame([{
-            "Student": res.get("student_info", "Candidate"),
-            "Question": exam_question,
-            "Marks Awarded": marks,
-            "Max Marks": max_m,
-            "Percentage": f"{pct:.1f}%",
-            "Status": status_label,
-            "Examiner Feedback": res.get("examiner_feedback", "")
-        }])
-        st.download_button(
-            label="📄 Download Student Result Card (CSV)",
-            data=summary_df.to_csv(index=False),
-            file_name="scangrade_result_card.csv",
-            mime="text/csv",
-            use_container_width=True
-        )
-
-    with export_col2:
-        # Full JSON Export
-        st.download_button(
-            label="💾 Download Full Audit Audit Trail (JSON)",
-            data=json.dumps(res, indent=2),
-            file_name="scangrade_audit_log.json",
-            mime="application/json",
-            use_container_width=True
-        )

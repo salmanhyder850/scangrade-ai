@@ -663,20 +663,30 @@ with st.sidebar:
     st.markdown("---")
     st.subheader("📚 Quick Test Exam Presets")
     preset_names = list(PRESETS.keys())
-    selected_preset = st.selectbox("Choose a pre-built exam:", preset_names)
+
+    def on_preset_select():
+        chosen = st.session_state.get("preset_dropdown")
+        if chosen and chosen in PRESETS:
+            p_data = PRESETS[chosen]
+            st.session_state["exam_q"] = p_data["question"]
+            st.session_state["rubric"] = p_data["rubric"]
+            s_buf = generate_handwritten_sheet_image(p_data["handwritten_lines"])
+            st.session_state["current_image"] = s_buf.getvalue()
+            st.session_state["preset_key"] = chosen
+            st.session_state["uploaded_filename"] = ""
+            if "eval_results" in st.session_state:
+                del st.session_state["eval_results"]
+
+    selected_preset = st.selectbox(
+        "Choose a pre-built exam:",
+        preset_names,
+        key="preset_dropdown",
+        on_change=on_preset_select
+    )
 
     if st.button("📥 Load Selected Preset Exam", use_container_width=True):
-        preset_data = PRESETS[selected_preset]
-        st.session_state["exam_q"] = preset_data["question"]
-        st.session_state["rubric"] = preset_data["rubric"]
-        sample_buf = generate_handwritten_sheet_image(preset_data["handwritten_lines"])
-        st.session_state["current_image"] = sample_buf.getvalue()
-        st.session_state["preset_key"] = selected_preset
-        st.session_state["uploaded_filename"] = ""
-        # Reset stale results when loading a new preset
-        if "eval_results" in st.session_state:
-            del st.session_state["eval_results"]
-        st.success(f"Loaded: {selected_preset}")
+        on_preset_select()
+        st.success(f"Loaded: {st.session_state.get('preset_key', selected_preset)}")
         st.rerun()
 
     st.markdown("---")

@@ -98,28 +98,7 @@ Your default browser will launch at `http://localhost:8501`.
 
 > **Tip for Instant Testing:** The app includes a built-in **"Demo / Mock Mode"** switch and pre-rendered sample exam papers (Physics, CS, Math). You can evaluate right away even before entering an API key!
 
----
 
-## 🌐 Deploy to Free Cloud (Streamlit Community Cloud)
-
-1. Push your code to a public GitHub repository:
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: complete ScanGrade AI handwritten exam evaluator"
-   git branch -M main
-   git remote add origin https://github.com/salmanhyder850/scangrade-ai.git
-   git push -u origin main
-   ```
-2. Navigate to **[share.streamlit.io](https://share.streamlit.io)** and sign in with GitHub.
-3. Click **"New App"** -> choose repository `scangrade-ai`, branch `main`, main file `app.py`.
-4. In **Advanced Settings** -> **Secrets**, add:
-   ```toml
-   GEMINI_API_KEY = "your-actual-api-key-here"
-   ```
-5. Click **Deploy**. Your app will be live with a public URL in 2 minutes!
-
----
 
 
 ## 👥 Team Details

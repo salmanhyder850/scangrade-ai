@@ -2,7 +2,7 @@
 
 > **DITE Hackathon 2026-27 Submission**  
 > **Theme:** Education  
-> **Repository:** [https://github.com/<YOUR_USERNAME>/scangrade-ai](https://github.com/<YOUR_USERNAME>/scangrade-ai)  
+> **Repository:** [https://github.com/salmanhyder850/scangrade-ai](https://github.com/salmanhyder850/scangrade-ai)  
 > **Live Web App:** [https://scangrade-ai.streamlit.app](https://scangrade-ai.streamlit.app)  
 > **Demo Video Link:** [Google Drive Public Link]  
 
@@ -68,7 +68,7 @@ ScanGrade AI is **not** a chatbot. It is a multi-stage automated document intell
 
 ### Step 1: Clone Repository & Move Into Folder
 ```bash
-git clone https://github.com/<YOUR_USERNAME>/scangrade-ai.git
+git clone https://github.com/salmanhyder850/scangrade-ai.git
 cd scangrade-ai
 ```
 
@@ -108,7 +108,7 @@ Your default browser will launch at `http://localhost:8501`.
    git add .
    git commit -m "feat: complete ScanGrade AI handwritten exam evaluator"
    git branch -M main
-   git remote add origin https://github.com/<YOUR_USERNAME>/scangrade-ai.git
+   git remote add origin https://github.com/salmanhyder850/scangrade-ai.git
    git push -u origin main
    ```
 2. Navigate to **[share.streamlit.io](https://share.streamlit.io)** and sign in with GitHub.

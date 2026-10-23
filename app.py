@@ -507,7 +507,74 @@ def generate_mock_evaluation(identifier, exam_question="", rubric_criteria=""):
             "examiner_feedback": "Perfect 10/10 submission! Demonstrates complete mastery of algorithm theory, preconditions, and complexity analysis."
         }
 
-    # Case 5: Math - Bilal Ahmed (10 / 10 Perfect)
+    # Case 5: ML - Danial Shah (4.5 / 10 Flawed Formula & Omissions)
+    elif any(k in ident for k in ["danial", "ml_sample_flawed", "gradient descent flawed", "4.5"]):
+        return {
+            "transcribed_handwriting": (
+                "Student Name: Danial Shah | Roll: 2026-AI-077 | Exam: Machine Learning\n"
+                "Q: Explain Gradient Descent, weight update rule, learning rate effects, & stopping criteria.\n"
+                "Ans: Gradient descent optimizes loss to make machine learning models accurate.\n"
+                "Update Formula: w = w + α * J(w)\n"
+                "Learning Rate: Small learning rate is slow."
+            ),
+            "student_info": "Danial Shah (Roll No: 2026-AI-077)",
+            "total_marks_awarded": 4.5,
+            "max_marks_possible": 10.0,
+            "criteria_breakdown": [
+                {"criterion": "Definition & objective of Gradient Descent", "marks_awarded": 2.5, "max_marks": 3.0, "deduction_reason": "Basic understanding stated, but lacked detail on calculating gradient of loss function."},
+                {"criterion": "Mathematical weight update rule", "marks_awarded": 1.0, "max_marks": 3.0, "deduction_reason": "CRITICAL MATHEMATICAL ERROR: Wrote w + α*J(w) instead of w - α*∇J(w). Used addition instead of subtraction and omitted the gradient operator."},
+                {"criterion": "Analysis of learning rate effects (high vs low)", "marks_awarded": 1.0, "max_marks": 2.0, "deduction_reason": "Mentioned small learning rate is slow, but completely omitted the consequences of a high learning rate (divergence, oscillation, overshooting)."},
+                {"criterion": "Stopping / termination conditions", "marks_awarded": 0.0, "max_marks": 2.0, "deduction_reason": "Omitted any stopping criteria (e.g. gradient magnitude < ε or max iterations)."}
+            ],
+            "strengths": [
+                "Understands that Gradient Descent is used to optimize ML model loss"
+            ],
+            "mistakes_or_missing_steps": [
+                "CRITICAL: Sign mistake in update rule (w + α J(w) performs gradient ascent, maximizing error instead of minimizing)",
+                "Omitted the gradient operator ∇ in the update formula",
+                "Did not describe the impact of a learning rate that is too large (overshooting/divergence)",
+                "No stopping or termination criteria provided"
+            ],
+            "knowledge_gaps": [
+                "Vector calculus: Distinction between objective value J(w) and gradient vector ∇J(w)",
+                "Gradient descent directionality (subtraction moves opposite to steepest ascent)",
+                "Hyperparameter convergence dynamics and stopping conditions"
+            ],
+            "examiner_feedback": "Score: 4.5/10. Writing a '+' sign in the update rule is a critical failure because it maximizes loss instead of minimizing it. Stopping criteria were completely omitted."
+        }
+
+    # Case 6: ML - Ayesha Siddiqui (10 / 10 Perfect)
+    elif any(k in ident for k in ["ayesha", "ml_sample_perfect", "gradient descent", "machine learning"]):
+        return {
+            "transcribed_handwriting": (
+                "Student Name: Ayesha Siddiqui | Roll: 2026-AI-019 | Exam: Machine Learning\n"
+                "Q: Explain Gradient Descent, weight update rule, learning rate effects, & stopping criteria.\n"
+                "Ans: Gradient Descent is an iterative optimization algorithm used to minimize a loss function J(w). "
+                "Weight Update Formula: w = w - α * ∇J(w). "
+                "Here, w is parameter vector, α is learning rate, and ∇J(w) is gradient of loss function. "
+                "Learning Rate Effects: High α overshoots minimum/diverges; Low α causes slow convergence. "
+                "Stopping Conditions: Algorithm halts when ||∇J(w)|| < ε or max iterations reached."
+            ),
+            "student_info": "Ayesha Siddiqui (Roll No: 2026-AI-019)",
+            "total_marks_awarded": 10.0,
+            "max_marks_possible": 10.0,
+            "criteria_breakdown": [
+                {"criterion": "Definition & objective of Gradient Descent", "marks_awarded": 3.0, "max_marks": 3.0, "deduction_reason": "Complete and accurate formulation of iterative loss minimization."},
+                {"criterion": "Mathematical weight update rule", "marks_awarded": 3.0, "max_marks": 3.0, "deduction_reason": "Flawless formula w = w - α∇J(w) with all symbols defined."},
+                {"criterion": "Analysis of learning rate effects (high vs low)", "marks_awarded": 2.0, "max_marks": 2.0, "deduction_reason": "Accurately contrasted overshooting/divergence with slow convergence."},
+                {"criterion": "Stopping / termination conditions", "marks_awarded": 2.0, "max_marks": 2.0, "deduction_reason": "Correctly cited gradient norm threshold ε and iteration limits."}
+            ],
+            "strengths": [
+                "Mathematically precise vector notation",
+                "Clear distinction between divergence vs slow convergence dynamics",
+                "Explicitly stated standard convergence tolerance threshold ε"
+            ],
+            "mistakes_or_missing_steps": ["None detected."],
+            "knowledge_gaps": ["No conceptual gaps found. Exemplary mastery of optimization theory."],
+            "examiner_feedback": "Perfect 10/10 submission! Mathematically rigorous, clear diagrams and notation, and complete coverage of hyperparameter effects."
+        }
+
+    # Case 7: Math - Bilal Ahmed (10 / 10 Perfect)
     elif any(k in ident for k in ["bilal", "math_sample_perfect", "quadratic"]):
         return {
             "transcribed_handwriting": (

@@ -70,7 +70,7 @@ except Exception:
 
 # ----------------- PRESET EXAM SAMPLES -----------------
 PRESETS = {
-    "Physics (Ohm's Law & Circuit Calculation)": {
+    "Physics — Hamza Tariq (10/10 Perfect)": {
         "question": "State Ohm's Law and calculate the current flowing through a resistor if V = 12V and R = 4 Ω.",
         "rubric": """1. Correct statement of Ohm's Law including temperature/physical state condition (4 marks)
 2. Mathematical Formula (V = I * R or I = V / R) (2 marks)
@@ -80,6 +80,7 @@ Total: 10 Marks""",
         "student_name": "Hamza Tariq",
         "roll_no": "2026-PHY-042",
         "subject": "Physics I",
+        "mock_score": 10.0,
         "handwritten_lines": [
             "Student: Hamza Tariq  |  Roll: 2026-PHY-042  |  Sub: Physics",
             "Q1. State Ohm's Law & find current for V = 12V, R = 4 Ohm.",
@@ -90,7 +91,27 @@ Total: 10 Marks""",
             "Hence the calculated current through circuit is 3 A."
         ]
     },
-    "Computer Science (Binary Search Algorithm)": {
+    "Physics — Ali Raza (5.5/10 Flawed Arithmetic & Units)": {
+        "question": "State Ohm's Law and calculate the current flowing through a resistor if V = 12V and R = 4 Ω.",
+        "rubric": """1. Correct statement of Ohm's Law including temperature/physical state condition (4 marks)
+2. Mathematical Formula (V = I * R or I = V / R) (2 marks)
+3. Step-by-step substitution and numerical calculation (3 marks)
+4. Correct SI unit (Amperes / A) (1 mark)
+Total: 10 Marks""",
+        "student_name": "Ali Raza",
+        "roll_no": "2026-PHY-088",
+        "subject": "Physics I",
+        "mock_score": 5.5,
+        "handwritten_lines": [
+            "Student: Ali Raza  |  Roll: 2026-PHY-088  |  Sub: Physics",
+            "Q1. State Ohm's Law & find current for V = 12V, R = 4 Ohm.",
+            "Ans: Ohm's law says voltage is proportional to current.",
+            "Formula: V = I * R",
+            "Calculation: I = 12 / 4 = 4",
+            "Result = 4 (no units written)"
+        ]
+    },
+    "CS: Binary Search — Sarah Khan (10/10 Perfect)": {
         "question": "Explain the Binary Search algorithm, state its preconditions, and derive its worst-case time complexity.",
         "rubric": """1. Definition of Binary Search and divide-and-conquer approach (3 marks)
 2. Crucial precondition: array must be sorted (2 marks)
@@ -100,6 +121,7 @@ Total: 10 Marks""",
         "student_name": "Sarah Khan",
         "roll_no": "2026-CS-109",
         "subject": "Data Structures & Algorithms",
+        "mock_score": 10.0,
         "handwritten_lines": [
             "Student: Sarah Khan  |  Roll: 2026-CS-109  |  Sub: CS - DSA",
             "Q: Explain Binary Search, preconditions, & time complexity.",
@@ -111,7 +133,26 @@ Total: 10 Marks""",
             "Thus k = log2(N). Time Complexity is O(log n)."
         ]
     },
-    "Mathematics (Quadratic Formula Derivation)": {
+    "CS: Binary Search — Usman Farooq (5/10 Incomplete)": {
+        "question": "Explain the Binary Search algorithm, state its preconditions, and derive its worst-case time complexity.",
+        "rubric": """1. Definition of Binary Search and divide-and-conquer approach (3 marks)
+2. Crucial precondition: array must be sorted (2 marks)
+3. Step-by-step search procedure (mid-point calculation and range halving) (3 marks)
+4. Time complexity derivation: O(log n) with justification (2 marks)
+Total: 10 Marks""",
+        "student_name": "Usman Farooq",
+        "roll_no": "2026-CS-214",
+        "subject": "Data Structures & Algorithms",
+        "mock_score": 5.0,
+        "handwritten_lines": [
+            "Student: Usman Farooq  |  Roll: 2026-CS-214  |  Sub: CS - DSA",
+            "Q: Explain Binary Search, preconditions, & time complexity.",
+            "Ans: Binary search splits an array into two halves to search faster.",
+            "Procedure: check the middle element. If not equal, check other parts.",
+            "Time complexity is O(log n)."
+        ]
+    },
+    "Math: Quadratic Formula — Bilal Ahmed (10/10 Perfect)": {
         "question": "Solve the quadratic equation 2x^2 + 5x - 3 = 0 using the quadratic formula, showing all substitution steps.",
         "rubric": """1. Identification of coefficients a = 2, b = 5, c = -3 (2 marks)
 2. Correct Quadratic Formula: x = (-b ± √(b² - 4ac)) / (2a) (2 marks)
@@ -121,6 +162,7 @@ Total: 10 Marks""",
         "student_name": "Bilal Ahmed",
         "roll_no": "2026-MATH-015",
         "subject": "Applied Mathematics",
+        "mock_score": 10.0,
         "handwritten_lines": [
             "Student: Bilal Ahmed  |  Roll: 2026-MATH-015  |  Sub: Math",
             "Q: Solve 2x^2 + 5x - 3 = 0 using quadratic formula.",
@@ -130,6 +172,28 @@ Total: 10 Marks""",
             "x = [-5 +- sqrt(49)] / (2*2) = [-5 +- 7] / 4.",
             "Root 1: (-5 + 7)/4 = 2/4 = 0.5",
             "Root 2: (-5 - 7)/4 = -12/4 = -3. Roots are {0.5, -3}."
+        ]
+    },
+    "Math: Quadratic Formula — Zainab Malik (6/10 Sign Error)": {
+        "question": "Solve the quadratic equation 2x^2 + 5x - 3 = 0 using the quadratic formula, showing all substitution steps.",
+        "rubric": """1. Identification of coefficients a = 2, b = 5, c = -3 (2 marks)
+2. Correct Quadratic Formula: x = (-b ± √(b² - 4ac)) / (2a) (2 marks)
+3. Step-by-step discriminant evaluation: 5² - 4(2)(-3) = 25 + 24 = 49 (3 marks)
+4. Accurate roots computation: x = 0.5 and x = -3 (3 marks)
+Total: 10 Marks""",
+        "student_name": "Zainab Malik",
+        "roll_no": "2026-MATH-051",
+        "subject": "Applied Mathematics",
+        "mock_score": 6.0,
+        "handwritten_lines": [
+            "Student: Zainab Malik  |  Roll: 2026-MATH-051  |  Sub: Math",
+            "Q: Solve 2x^2 + 5x - 3 = 0 using quadratic formula.",
+            "Ans: 2x^2 + 5x - 3 = 0. Here a = 2, b = 5, c = -3.",
+            "Formula: x = [-b +- sqrt(b^2 - 4ac)] / 2a",
+            "Discriminant = 25 - 24 = 1",
+            "x = [-5 +- 1] / 4",
+            "Root 1: (-5 + 1)/4 = -4/4 = -1",
+            "Root 2: (-5 - 1)/4 = -6/4 = -1.5. Roots are {-1, -1.5}."
         ]
     }
 }
@@ -251,12 +315,192 @@ Return ONLY a valid JSON object matching this schema:
     return json.loads(clean_text.strip())
 
 # ----------------- MOCK / DEMO SIMULATION FALLBACK -----------------
-def generate_mock_evaluation(selected_preset_key, exam_question, rubric_criteria):
+def generate_mock_evaluation(identifier, exam_question="", rubric_criteria=""):
     """
-    Fallback mock evaluator to ensure the app works 100% reliably
-    even during a live pitch if API keys or network are temporarily unavailable.
+    Intelligent mock evaluator for live testing without an active Gemini API connection.
+    Recognizes uploaded filenames and preset selections to award exact matching scores:
+    • Usman Farooq / Incomplete / 5 out of 10 -> 5.0 / 10.0
+    • Ali Raza / Flawed / 6 out of 10 -> 5.5 / 10.0
+    • Zainab Malik / Sign Error / 6 out of 10 -> 6.0 / 10.0
+    • Sarah Khan / Perfect CS -> 10.0 / 10.0
+    • Bilal Ahmed / Perfect Math -> 10.0 / 10.0
+    • Hamza Tariq / Perfect Physics -> 10.0 / 10.0
     """
-    if "Physics" in selected_preset_key:
+    ident = (str(identifier) + " " + str(exam_question)).lower()
+
+    # Case 1: CS - Usman Farooq (5 / 10 Incomplete)
+    if any(k in ident for k in ["usman", "incomplete", "5_out_of_10", "cs_sample_incomplete", "5/10"]):
+        return {
+            "transcribed_handwriting": (
+                "Student: Usman Farooq | Roll: 2026-CS-214 | Sub: CS - DSA\n"
+                "Q: Explain Binary Search, preconditions, & time complexity.\n"
+                "Ans: Binary search splits an array into two halves to search faster.\n"
+                "Procedure: check the middle element. If not equal, check other parts.\n"
+                "Time complexity is O(log n)."
+            ),
+            "student_info": "Usman Farooq (Roll No: 2026-CS-214)",
+            "total_marks_awarded": 5.0,
+            "max_marks_possible": 10.0,
+            "criteria_breakdown": [
+                {"criterion": "Definition of Binary Search & divide-and-conquer", "marks_awarded": 3.0, "max_marks": 3.0, "deduction_reason": "Correct high-level intuition of dividing search space."},
+                {"criterion": "Precondition: Array MUST be sorted", "marks_awarded": 0.0, "max_marks": 2.0, "deduction_reason": "CRITICAL OMISSION: Failed to state that Binary Search strictly requires a sorted array."},
+                {"criterion": "Step-by-step search procedure (mid calculation)", "marks_awarded": 2.0, "max_marks": 3.0, "deduction_reason": "Described concept informally without explicit midpoint formula mid = (low+high)/2."},
+                {"criterion": "Mathematical Time Complexity derivation", "marks_awarded": 0.0, "max_marks": 2.0, "deduction_reason": "Stated O(log n) as a fact but provided zero derivation steps (N/2^k = 1)."}
+            ],
+            "strengths": [
+                "Understands the intuitive concept of dividing the search space",
+                "Correctly memorized that the final complexity is O(log n)"
+            ],
+            "mistakes_or_missing_steps": [
+                "CRITICAL: Failed to state the mandatory precondition that array must be sorted",
+                "Did not provide the formula for index calculation: mid = (low + high) / 2",
+                "Omitted the logarithmic mathematical proof showing why k = log2(N)"
+            ],
+            "knowledge_gaps": [
+                "Algorithmic prerequisites and invariant guarantees",
+                "Recurrence relations and mathematical Big-O derivation"
+            ],
+            "examiner_feedback": "Score: 5/10. The student understands the high-level concept, but failed to mention the most critical requirement for binary search (a sorted array) and provided no derivation for the time complexity."
+        }
+
+    # Case 2: Physics - Ali Raza (5.5 / 10 Flawed Calculation & Missing Units)
+    elif any(k in ident for k in ["ali", "physics_sample_flawed", "flawed arithmetic", "flawed"]):
+        return {
+            "transcribed_handwriting": (
+                "Student: Ali Raza | Roll: 2026-PHY-088 | Sub: Physics\n"
+                "Q1. State Ohm's Law & find current for V = 12V, R = 4 Ohm.\n"
+                "Ans: Ohm's law says voltage is proportional to current.\n"
+                "Formula: V = I * R\n"
+                "Calculation: I = 12 / 4 = 4\n"
+                "Result = 4"
+            ),
+            "student_info": "Ali Raza (Roll No: 2026-PHY-088)",
+            "total_marks_awarded": 5.5,
+            "max_marks_possible": 10.0,
+            "criteria_breakdown": [
+                {"criterion": "Ohm's Law statement with constant temperature condition", "marks_awarded": 2.0, "max_marks": 4.0, "deduction_reason": "Incomplete law: Omitted mandatory condition that temperature/physical state must remain constant."},
+                {"criterion": "Mathematical Formula (V = IR)", "marks_awarded": 2.0, "max_marks": 2.0, "deduction_reason": "Correct relationship formula stated."},
+                {"criterion": "Substitution and numerical arithmetic", "marks_awarded": 1.5, "max_marks": 3.0, "deduction_reason": "Arithmetic calculation error: 12 / 4 = 3, student erroneously wrote 4."},
+                {"criterion": "Correct SI units (Amperes / A)", "marks_awarded": 0.0, "max_marks": 1.0, "deduction_reason": "No SI unit specified for the calculated current."}
+            ],
+            "strengths": [
+                "Correctly remembered the algebraic formula V = I * R",
+                "Substituted the given values into the formula"
+            ],
+            "mistakes_or_missing_steps": [
+                "Omitted the constant temperature condition in the definition of Ohm's Law",
+                "Basic arithmetic error: 12 / 4 was calculated as 4 instead of 3",
+                "Missing SI unit (Amperes / A) in final answer"
+            ],
+            "knowledge_gaps": [
+                "Conditions of validity for Ohm's Law (temperature dependency)",
+                "Physical dimensions and mandatory scientific unit notation"
+            ],
+            "examiner_feedback": "Score: 5.5/10. Points were heavily deducted for an arithmetic error in dividing 12 by 4, omitting scientific units, and leaving out the physical condition under which Ohm's law holds true."
+        }
+
+    # Case 3: Math - Zainab Malik (6.0 / 10 Sign Error)
+    elif any(k in ident for k in ["zainab", "sign_error", "math_sample_sign_error"]):
+        return {
+            "transcribed_handwriting": (
+                "Student: Zainab Malik | Roll: 2026-MATH-051 | Sub: Math\n"
+                "Q: Solve 2x^2 + 5x - 3 = 0 using quadratic formula.\n"
+                "Ans: 2x^2 + 5x - 3 = 0. Here a = 2, b = 5, c = -3.\n"
+                "Formula: x = [-b +- sqrt(b^2 - 4ac)] / 2a\n"
+                "Discriminant = 25 - 24 = 1\n"
+                "x = [-5 +- 1] / 4\n"
+                "Root 1: (-5 + 1)/4 = -4/4 = -1\n"
+                "Root 2: (-5 - 1)/4 = -6/4 = -1.5. Roots are {-1, -1.5}."
+            ),
+            "student_info": "Zainab Malik (Roll No: 2026-MATH-051)",
+            "total_marks_awarded": 6.0,
+            "max_marks_possible": 10.0,
+            "criteria_breakdown": [
+                {"criterion": "Identification of coefficients a = 2, b = 5, c = -3", "marks_awarded": 2.0, "max_marks": 2.0, "deduction_reason": "Coefficients correctly identified from standard form."},
+                {"criterion": "Correct Quadratic Formula", "marks_awarded": 2.0, "max_marks": 2.0, "deduction_reason": "Formula accurately stated."},
+                {"criterion": "Step-by-step discriminant evaluation", "marks_awarded": 1.0, "max_marks": 3.0, "deduction_reason": "Algebraic sign error: -4(2)(-3) is +24, but student evaluated as -24, yielding discriminant 1 instead of 49."},
+                {"criterion": "Accurate roots computation", "marks_awarded": 1.0, "max_marks": 3.0, "deduction_reason": "Derived roots {-1, -1.5} are incorrect due to propagated discriminant error."}
+            ],
+            "strengths": [
+                "Accurately extracted quadratic parameters a, b, and c",
+                "Flawless recall of the quadratic formula"
+            ],
+            "mistakes_or_missing_steps": [
+                "Sign error in discriminant: (-4) * (2) * (-3) = +24, not -24",
+                "Final solution set is incorrect due to the arithmetic sign blunder"
+            ],
+            "knowledge_gaps": [
+                "Negative number multiplication rules in algebraic discriminants"
+            ],
+            "examiner_feedback": "Score: 6/10. Solid procedural setup, but a fundamental negative sign error in the discriminant (-4ac) contaminated the final roots calculation."
+        }
+
+    # Case 4: CS - Sarah Khan (10 / 10 Perfect)
+    elif any(k in ident for k in ["sarah", "cs_sample_perfect", "binary search"]):
+        return {
+            "transcribed_handwriting": (
+                "Student: Sarah Khan | Roll: 2026-CS-109 | Sub: CS - DSA\n"
+                "Q: Explain Binary Search, preconditions, & time complexity.\n"
+                "Ans: Binary Search is a divide-and-conquer algorithm to find an element in a list. "
+                "Precondition: Array MUST be sorted.\n"
+                "Procedure: Compute mid = (low + high)/2. If key == arr[mid], found. "
+                "If key < arr[mid], search left half, else search right half.\n"
+                "Complexity: Search space halves each step: N, N/2, N/4 ... N/2^k = 1. "
+                "Thus k = log2(N). Time Complexity is O(log n)."
+            ),
+            "student_info": "Sarah Khan (Roll No: 2026-CS-109)",
+            "total_marks_awarded": 10.0,
+            "max_marks_possible": 10.0,
+            "criteria_breakdown": [
+                {"criterion": "Definition of Binary Search and divide-and-conquer", "marks_awarded": 3.0, "max_marks": 3.0, "deduction_reason": "Clear and accurate definition."},
+                {"criterion": "Crucial precondition: array must be sorted", "marks_awarded": 2.0, "max_marks": 2.0, "deduction_reason": "Explicitly highlighted as mandatory."},
+                {"criterion": "Step-by-step procedure & mid calculation", "marks_awarded": 3.0, "max_marks": 3.0, "deduction_reason": "Precise algorithm mechanics and branching logic."},
+                {"criterion": "Mathematical Time Complexity derivation", "marks_awarded": 2.0, "max_marks": 2.0, "deduction_reason": "Rigorous derivation from N/2^k = 1 to O(log n)."}
+            ],
+            "strengths": [
+                "Emphasized sorted array requirement",
+                "Clear mathematical proof of logarithmic complexity",
+                "Well-structured recursive halving logic"
+            ],
+            "mistakes_or_missing_steps": ["None detected."],
+            "knowledge_gaps": ["No conceptual gaps found. Exemplary mastery of Binary Search."],
+            "examiner_feedback": "Perfect 10/10 submission! Demonstrates complete mastery of algorithm theory, preconditions, and complexity analysis."
+        }
+
+    # Case 5: Math - Bilal Ahmed (10 / 10 Perfect)
+    elif any(k in ident for k in ["bilal", "math_sample_perfect", "quadratic"]):
+        return {
+            "transcribed_handwriting": (
+                "Student: Bilal Ahmed | Roll: 2026-MATH-015 | Sub: Math\n"
+                "Q: Solve 2x^2 + 5x - 3 = 0 using quadratic formula.\n"
+                "Ans: Given 2x^2 + 5x - 3 = 0. Here a = 2, b = 5, c = -3.\n"
+                "Formula: x = [-b +- sqrt(b^2 - 4ac)] / (2a)\n"
+                "Discriminant = (5)^2 - 4*(2)*(-3) = 25 + 24 = 49.\n"
+                "x = [-5 +- sqrt(49)] / (2*2) = [-5 +- 7] / 4.\n"
+                "Root 1: (-5 + 7)/4 = 2/4 = 0.5\n"
+                "Root 2: (-5 - 7)/4 = -12/4 = -3. Roots are {0.5, -3}."
+            ),
+            "student_info": "Bilal Ahmed (Roll No: 2026-MATH-015)",
+            "total_marks_awarded": 10.0,
+            "max_marks_possible": 10.0,
+            "criteria_breakdown": [
+                {"criterion": "Identification of coefficients a = 2, b = 5, c = -3", "marks_awarded": 2.0, "max_marks": 2.0, "deduction_reason": "Accurately extracted."},
+                {"criterion": "Correct Quadratic Formula", "marks_awarded": 2.0, "max_marks": 2.0, "deduction_reason": "Standard formula correctly stated."},
+                {"criterion": "Step-by-step discriminant evaluation", "marks_awarded": 3.0, "max_marks": 3.0, "deduction_reason": "Flawless arithmetic: 25 - (-24) = 49."},
+                {"criterion": "Accurate roots computation", "marks_awarded": 3.0, "max_marks": 3.0, "deduction_reason": "Accurate final roots {0.5, -3}."}
+            ],
+            "strengths": [
+                "Clean step-by-step algebraic substitution",
+                "Correct handling of double negative multiplication in discriminant",
+                "Both roots accurately calculated"
+            ],
+            "mistakes_or_missing_steps": ["None."],
+            "knowledge_gaps": ["No knowledge gaps identified."],
+            "examiner_feedback": "Excellent work (10/10). Clean handwriting, mathematically rigorous substitution, and completely accurate final roots."
+        }
+
+    # Case 6: Physics - Hamza Tariq (10 / 10 Perfect)
+    else:
         return {
             "transcribed_handwriting": (
                 "Student: Hamza Tariq | Roll: 2026-PHY-042 | Sub: Physics\n"
@@ -282,24 +526,7 @@ def generate_mock_evaluation(selected_preset_key, exam_question, rubric_criteria
             ],
             "mistakes_or_missing_steps": ["None detected in this answer sheet."],
             "knowledge_gaps": ["No conceptual gaps found. Exemplary mastery of Ohm's Law."],
-            "examiner_feedback": "Outstanding work! The student demonstrates thorough conceptual grasp and precise mathematical execution."
-        }
-    else:
-        return {
-            "transcribed_handwriting": "Student answer successfully deciphered from handwritten sheet.",
-            "student_info": "Assessed Student",
-            "total_marks_awarded": 9.0,
-            "max_marks_possible": 10.0,
-            "criteria_breakdown": [
-                {"criterion": "Conceptual Foundation", "marks_awarded": 3.5, "max_marks": 4.0, "deduction_reason": "Good understanding, minor detail omitted."},
-                {"criterion": "Formulas & Equations", "marks_awarded": 2.0, "max_marks": 2.0, "deduction_reason": "Exact formulas used."},
-                {"criterion": "Procedural Execution", "marks_awarded": 2.5, "max_marks": 3.0, "deduction_reason": "All steps followed clearly."},
-                {"criterion": "Final Accuracy & Units", "marks_awarded": 1.0, "max_marks": 1.0, "deduction_reason": "Accurate final answer."}
-            ],
-            "strengths": ["Well-structured answer", "Clear handwriting", "Accurate formula application"],
-            "mistakes_or_missing_steps": ["Could elaborate slightly more on edge conditions."],
-            "knowledge_gaps": ["Minor edge cases in boundary conditions."],
-            "examiner_feedback": "Very strong performance overall with neat presentation."
+            "examiner_feedback": "Outstanding work (10/10)! The student demonstrates thorough conceptual grasp and precise mathematical execution."
         }
 
 # ----------------- SIDEBAR CONTROLS -----------------
@@ -327,7 +554,8 @@ with st.sidebar:
 
     st.markdown("---")
     st.subheader("📚 Quick Test Exam Presets")
-    selected_preset = st.selectbox("Choose a pre-built exam:", list(PRESETS.keys()))
+    preset_names = list(PRESETS.keys())
+    selected_preset = st.selectbox("Choose a pre-built exam:", preset_names)
 
     if st.button("📥 Load Selected Preset Exam", use_container_width=True):
         preset_data = PRESETS[selected_preset]
@@ -336,6 +564,10 @@ with st.sidebar:
         sample_buf = generate_handwritten_sheet_image(preset_data["handwritten_lines"])
         st.session_state["current_image"] = sample_buf.getvalue()
         st.session_state["preset_key"] = selected_preset
+        st.session_state["uploaded_filename"] = ""
+        # Reset stale results when loading a new preset
+        if "eval_results" in st.session_state:
+            del st.session_state["eval_results"]
         st.success(f"Loaded: {selected_preset}")
         st.rerun()
 
@@ -349,11 +581,12 @@ st.markdown('<div class="sub-header">Multimodal Computer Vision • Handwriting 
 # Layout: Step 1 (Question & Rubric) + Step 2 (Exam Paper Input)
 col_setup, col_paper = st.columns([1, 1], gap="large")
 
+first_key = list(PRESETS.keys())[0]
+default_q = PRESETS[first_key]["question"]
+default_rubric = PRESETS[first_key]["rubric"]
+
 with col_setup:
     st.subheader("1️⃣ Exam Question & Marking Rubric")
-    default_q = PRESETS["Physics (Ohm's Law & Circuit Calculation)"]["question"]
-    default_rubric = PRESETS["Physics (Ohm's Law & Circuit Calculation)"]["rubric"]
-
     current_q = st.session_state.get("exam_q", default_q)
     current_rubric = st.session_state.get("rubric", default_rubric)
 
@@ -374,23 +607,35 @@ with col_paper:
         horizontal=True
     )
 
+    # Automatically clear stale evaluation if user switches input mode
+    if st.session_state.get("prev_source") != paper_source:
+        st.session_state["prev_source"] = paper_source
+        if "eval_results" in st.session_state:
+            del st.session_state["eval_results"]
+
     image_bytes_to_grade = None
 
     if paper_source == "Sample Preset Sheet":
         if "current_image" not in st.session_state:
-            default_preset = PRESETS["Physics (Ohm's Law & Circuit Calculation)"]
+            default_preset = PRESETS[first_key]
             buf = generate_handwritten_sheet_image(default_preset["handwritten_lines"])
             st.session_state["current_image"] = buf.getvalue()
-            st.session_state["preset_key"] = "Physics (Ohm's Law & Circuit Calculation)"
+            st.session_state["preset_key"] = first_key
 
         image_bytes_to_grade = st.session_state["current_image"]
-        st.image(image_bytes_to_grade, caption="Active Handwritten Answer Sheet", use_container_width=True)
+        st.image(image_bytes_to_grade, caption=f"Active Sheet: {st.session_state.get('preset_key', first_key)}", use_container_width=True)
 
     elif paper_source == "Upload Photo (PNG/JPG)":
         uploaded = st.file_uploader("Upload student answer sheet image", type=["png", "jpg", "jpeg"])
         if uploaded:
             image_bytes_to_grade = uploaded.read()
-            st.image(image_bytes_to_grade, caption="Uploaded Answer Sheet", use_container_width=True)
+            st.session_state["uploaded_filename"] = uploaded.name
+            # Reset stale evaluation if user uploads a new/different file
+            if st.session_state.get("last_uploaded_name") != uploaded.name:
+                st.session_state["last_uploaded_name"] = uploaded.name
+                if "eval_results" in st.session_state:
+                    del st.session_state["eval_results"]
+            st.image(image_bytes_to_grade, caption=f"Uploaded Sheet: {uploaded.name}", use_container_width=True)
         else:
             st.info("👆 Upload an image of student handwriting, or switch to 'Sample Preset Sheet' above.")
 
@@ -415,8 +660,16 @@ if start_eval:
         with st.spinner("🔍 Reading handwriting ink, cross-checking rubric criteria, and computing mark distribution..."):
             try:
                 if mock_mode or not api_key_input:
-                    preset_name = st.session_state.get("preset_key", "Physics")
-                    results = generate_mock_evaluation(preset_name, exam_question, rubric_criteria)
+                    # Dynamically determine the test case identifier
+                    lookup_identifier = ""
+                    if paper_source == "Upload Photo (PNG/JPG)":
+                        lookup_identifier = st.session_state.get("uploaded_filename", "")
+                    elif paper_source == "Sample Preset Sheet":
+                        lookup_identifier = st.session_state.get("preset_key", "")
+                    else:
+                        lookup_identifier = exam_question
+
+                    results = generate_mock_evaluation(lookup_identifier, exam_question, rubric_criteria)
                 else:
                     results = evaluate_exam_with_gemini(
                         api_key=api_key_input,

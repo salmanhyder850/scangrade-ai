@@ -4,7 +4,7 @@
 > **Theme:** Education  
 > **Repository:** [https://github.com/salmanhyder850/scangrade-ai](https://github.com/salmanhyder850/scangrade-ai)  
 > **Live Web App:** [https://scangrade-ai.streamlit.app](https://scangrade-ai.streamlit.app)  
-> **Demo Video Link:** [Google Drive Public Link]  
+
 
 ---
 
@@ -122,29 +122,7 @@ Your default browser will launch at `http://localhost:8501`.
 ---
 
 
-## 📁 Sample Test Datasets & Mock Data
-Pre-rendered handwritten answer sheets and rubrics are included in the [`sample_exams/`](./sample_exams/) directory:
-- **Physics:** `physics_sample_perfect_10_out_of_10.png` & `physics_sample_flawed_6_out_of_10.png`
-- **Computer Science:** `cs_sample_perfect_10_out_of_10.png` & `cs_sample_incomplete_5_out_of_10.png`
-- **Mathematics:** `math_sample_perfect_10_out_of_10.png` & `math_sample_sign_error_6_out_of_10.png`
-- Detailed question prompts, rubrics, and expected results are in [`sample_exams/MOCK_DATA_GUIDE.md`](./sample_exams/MOCK_DATA_GUIDE.md).
-
----
-
-## 🎬 3-Minute Demo Pitch Video Script
-
-| Time | Visual / Screen | Script & Voiceover |
-| :--- | :--- | :--- |
-| **0:00 - 0:30** | Team intro + Problem slide | *"Hello judges, we are Team [Name]. Every semester, educators grade hundreds of handwritten exam papers manually. Traditional OCR fails on messy student handwriting, and students wait weeks for generic grades without knowing why points were lost."* |
-| **0:30 - 1:00** | ScanGrade UI + Rubric setup | *"We built **ScanGrade AI**, an AI exam grader. On the left, the teacher defines the question and their strict rubric: 4 marks for definition, 2 for formula, 3 for steps, 1 for units."* |
-| **1:00 - 2:00** | Live Execution & Vision Demo | *Click 'Load Sample Preset' (or upload a photo from `sample_exams/`) and click 'Scan Handwriting & Grade Exam'.* *"Our multimodal vision model deciphers handwriting ink directly from the camera photo without complex OCR libraries."* |
-| **2:00 - 2:40** | Marksheet & Diagnostic Tabs | *Walk through:* <br>• **Scorecard:** Criterion-by-criterion points and deductions.<br>• **Deciphered Ink:** Exact transcription side-by-side with paper.<br>• **Knowledge Gaps:** Concept diagnostics for teacher interventions. |
-| **2:40 - 3:00** | Conclusion & Next Steps | *"ScanGrade AI makes grading 10x faster, consistent, and educational. Thank you!"* |
-
----
-
 ## 👥 Team Details
-- **Team Name:** [Your Team Name]
-- **Members:** [Member 1, Member 2, Member 3]
+- **Team Name:** [Triple Helix]
+- **Members:** [Sharjeel Arain, Salman Hyder, Usama Ali]
 - **Event:** DITE Hackathon 2026-27
-

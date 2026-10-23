@@ -26,7 +26,7 @@ ScanGrade AI is **not** a chatbot. It is a multi-stage automated document intell
             │
             ▼
 ┌────────────────────────────────────────────────────────┐
-│  Stage 1: Multimodal Computer Vision (Gemini 2.5)      │
+│  Stage 1: Multimodal Computer Vision (Gemini 3.5)      │
 │  • Reads raw handwriting ink directly from pixels       │
 │  • Transcribes formulas, cursive text, and numbers    │
 └───────────────────────────┬────────────────────────────┘
@@ -52,7 +52,7 @@ ScanGrade AI is **not** a chatbot. It is a multi-stage automated document intell
 
 ## 💻 Tech Stack
 - **Web Application & UI:** Streamlit (`>=1.35.0`)
-- **Multimodal AI Engine:** Google GenAI SDK (`google-genai>=0.1.1`, Gemini 2.5 Flash / 2.0 Flash)
+- **Multimodal AI Engine:** Google GenAI SDK (`google-genai>=0.1.1`, Gemini 3.5 Flash / 3.1 Flash-Lite)
 - **Computer Vision & Graphics:** Pillow (`PIL`)
 - **Data & Analytics:** Pandas, Plotly Express & Graph Objects
 - **Deployment Platform:** Streamlit Community Cloud (Zero-cost hosting)

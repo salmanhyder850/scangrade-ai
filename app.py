@@ -678,9 +678,9 @@ with st.sidebar:
 
     model_choice = st.selectbox(
         "Multimodal AI Model",
-        ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"],
+        ["gemini-3.5-flash", "gemini-3.1-flash-lite", "gemini-3.8-flash"],
         index=0,
-        help="Gemini 2.5 Flash is recommended for fastest OCR & handwriting vision."
+        help="Gemini 3.5 Flash is recommended for fast, high-accuracy handwriting vision and grading."
     )
 
     mock_mode = st.toggle("🧪 Demo / Mock Mode (No Key Needed)", value=(not bool(api_key_input)))

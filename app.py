@@ -330,19 +330,46 @@ Return ONLY a valid JSON object matching this schema:
 }}
 """
 
+    # Detect MIME type dynamically from image byte signature
+    mime_type = "image/png"
+    if image_bytes.startswith(b'\xff\xd8\xff'):
+        mime_type = "image/jpeg"
+    elif image_bytes.startswith(b'GIF8'):
+        mime_type = "image/gif"
+    elif image_bytes.startswith(b'RIFF') and b'WEBP' in image_bytes[:16]:
+        mime_type = "image/webp"
+
     image_part = types.Part.from_bytes(
         data=image_bytes,
-        mime_type="image/png"
+        mime_type=mime_type
     )
 
-    response = client.models.generate_content(
-        model=model_name,
-        contents=[image_part, prompt],
-        config=types.GenerateContentConfig(
-            response_mime_type="application/json",
-            temperature=0.1
-        )
-    )
+    # Resilient model cascading: try user-selected model first, then reliable fallbacks
+    models_to_try = [model_name]
+    for fallback in ["gemini-3.5-flash", "gemini-3.1-flash-lite"]:
+        if fallback not in models_to_try:
+            models_to_try.append(fallback)
+
+    last_error = None
+    response = None
+    for candidate in models_to_try:
+        try:
+            response = client.models.generate_content(
+                model=candidate,
+                contents=[image_part, prompt],
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    temperature=0.1
+                )
+            )
+            if response and response.text:
+                break
+        except Exception as e:
+            last_error = e
+            continue
+
+    if response is None:
+        raise last_error
 
     clean_text = response.text.strip()
     if clean_text.startswith("```json"):

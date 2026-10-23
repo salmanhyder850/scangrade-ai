@@ -475,41 +475,6 @@ def generate_mock_evaluation(identifier, exam_question="", rubric_criteria=""):
             "examiner_feedback": "Score: 5.5/10. Points were heavily deducted for an arithmetic error in dividing 12 by 4, omitting scientific units, and leaving out the physical condition under which Ohm's law holds true."
         }
 
-    # Case 3: Math - Zainab Malik (6.0 / 10 Sign Error)
-    elif any(k in ident for k in ["zainab", "sign_error", "math_sample_sign_error"]):
-        return {
-            "transcribed_handwriting": (
-                "Student: Zainab Malik | Roll: 2026-MATH-051 | Sub: Math\n"
-                "Q: Solve 2x^2 + 5x - 3 = 0 using quadratic formula.\n"
-                "Ans: 2x^2 + 5x - 3 = 0. Here a = 2, b = 5, c = -3.\n"
-                "Formula: x = [-b +- sqrt(b^2 - 4ac)] / 2a\n"
-                "Discriminant = 25 - 24 = 1\n"
-                "x = [-5 +- 1] / 4\n"
-                "Root 1: (-5 + 1)/4 = -4/4 = -1\n"
-                "Root 2: (-5 - 1)/4 = -6/4 = -1.5. Roots are {-1, -1.5}."
-            ),
-            "student_info": "Zainab Malik (Roll No: 2026-MATH-051)",
-            "total_marks_awarded": 6.0,
-            "max_marks_possible": 10.0,
-            "criteria_breakdown": [
-                {"criterion": "Identification of coefficients a = 2, b = 5, c = -3", "marks_awarded": 2.0, "max_marks": 2.0, "deduction_reason": "Coefficients correctly identified from standard form."},
-                {"criterion": "Correct Quadratic Formula", "marks_awarded": 2.0, "max_marks": 2.0, "deduction_reason": "Formula accurately stated."},
-                {"criterion": "Step-by-step discriminant evaluation", "marks_awarded": 1.0, "max_marks": 3.0, "deduction_reason": "Algebraic sign error: -4(2)(-3) is +24, but student evaluated as -24, yielding discriminant 1 instead of 49."},
-                {"criterion": "Accurate roots computation", "marks_awarded": 1.0, "max_marks": 3.0, "deduction_reason": "Derived roots {-1, -1.5} are incorrect due to propagated discriminant error."}
-            ],
-            "strengths": [
-                "Accurately extracted quadratic parameters a, b, and c",
-                "Flawless recall of the quadratic formula"
-            ],
-            "mistakes_or_missing_steps": [
-                "Sign error in discriminant: (-4) * (2) * (-3) = +24, not -24",
-                "Final solution set is incorrect due to the arithmetic sign blunder"
-            ],
-            "knowledge_gaps": [
-                "Negative number multiplication rules in algebraic discriminants"
-            ],
-            "examiner_feedback": "Score: 6/10. Solid procedural setup, but a fundamental negative sign error in the discriminant (-4ac) contaminated the final roots calculation."
-        }
 
     # Case 4: CS - Sarah Khan (10 / 10 Perfect)
     elif any(k in ident for k in ["sarah", "cs_sample_perfect", "binary search"]):

@@ -195,6 +195,46 @@ Total: 10 Marks""",
             "Root 1: (-5 + 1)/4 = -4/4 = -1",
             "Root 2: (-5 - 1)/4 = -6/4 = -1.5. Roots are {-1, -1.5}."
         ]
+    },
+    "AI / ML: Gradient Descent — Ayesha Siddiqui (10/10 Perfect)": {
+        "question": "Explain the Gradient Descent algorithm for optimizing model weights. State the weight update rule formula, describe the effect of a learning rate that is too high versus too low, and state when the algorithm terminates.",
+        "rubric": """1. Definition & objective: iterative optimization algorithm to minimize cost/loss function (3 marks)
+2. Mathematical update rule: w = w - α * ∇J(w) with definitions of α and gradient (3 marks)
+3. Analysis of learning rate: too high causes divergence/overshooting; too low causes slow convergence (2 marks)
+4. Termination condition: gradient approaches zero or change in loss falls below threshold ε (2 marks)
+Total: 10 Marks""",
+        "student_name": "Ayesha Siddiqui",
+        "roll_no": "2026-AI-019",
+        "subject": "Machine Learning",
+        "mock_score": 10.0,
+        "handwritten_lines": [
+            "Student Name: Ayesha Siddiqui   |   Roll: 2026-AI-019   |   Exam: Machine Learning",
+            "Q: Explain Gradient Descent, weight update rule, learning rate effects, & stopping criteria.",
+            "Ans: Gradient Descent is an iterative optimization algorithm used to minimize a loss function J(w).",
+            "Weight Update Formula: w = w - α * ∇J(w)",
+            "Here, w is parameter vector, α is learning rate, and ∇J(w) is gradient of loss function.",
+            "Learning Rate Effects: High α overshoots minimum/diverges; Low α causes slow convergence.",
+            "Stopping Conditions: Algorithm halts when ||∇J(w)|| < ε or max iterations reached."
+        ]
+    },
+    "AI / ML: Gradient Descent — Danial Shah (4.5/10 Flawed Formula & Omissions)": {
+        "question": "Explain the Gradient Descent algorithm for optimizing model weights. State the weight update rule formula, describe the effect of a learning rate that is too high versus too low, and state when the algorithm terminates.",
+        "rubric": """1. Definition & objective: iterative optimization algorithm to minimize cost/loss function (3 marks)
+2. Mathematical update rule: w = w - α * ∇J(w) with definitions of α and gradient (3 marks)
+3. Analysis of learning rate: too high causes divergence/overshooting; too low causes slow convergence (2 marks)
+4. Termination condition: gradient approaches zero or change in loss falls below threshold ε (2 marks)
+Total: 10 Marks""",
+        "student_name": "Danial Shah",
+        "roll_no": "2026-AI-077",
+        "subject": "Machine Learning",
+        "mock_score": 4.5,
+        "handwritten_lines": [
+            "Student Name: Danial Shah   |   Roll: 2026-AI-077   |   Exam: Machine Learning",
+            "Q: Explain Gradient Descent, weight update rule, learning rate effects, & stopping criteria.",
+            "Ans: Gradient descent optimizes loss to make machine learning models accurate.",
+            "Update Formula: w = w + α * J(w)",
+            "Learning Rate: Small learning rate is slow."
+        ]
     }
 }
 
